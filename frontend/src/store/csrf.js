@@ -1,6 +1,6 @@
 const csrfFetch = async (url, options = {}) => {
-    options.headers ||= {}
-    options.method ||= 'GET'
+    options.headers = options.headers || {}
+    options.method = options.method || 'GET'
     
     if (options.method.toUpperCase() !== 'GET') {
     options.headers['Content-Type'] =
